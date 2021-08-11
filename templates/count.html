@@ -1,0 +1,10 @@
+<h1>Count Page</h1>
+<h2>There are {{ count }} words</h2>
+<p><strong>Your text:<br />{{ fulltext }}</strong></p>
+<h2>Word Count</h2>
+{% for word, counttotal in wordict%}
+{{ word }} - {{counttotal}}
+<br />
+{% endfor %}
+<br />
+<a href="{% url 'startpage' %}">Home Page</a>
